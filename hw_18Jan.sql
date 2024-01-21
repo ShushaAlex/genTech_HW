@@ -3,8 +3,7 @@
 SELECT
 	Employees.FirstName,
     Employees.LastName,
-    SUM(OrderDetails.Quantity * Products.Price) AS Total_sold,
-    Total_sold * 0.05 AS Salary
+    SUM(OrderDetails.Quantity * Products.Price) * 0.05 AS Salary
 FROM Employees
 JOIN Orders ON Orders.EmployeeID = Employees.EmployeeID
 JOIN OrderDetails ON OrderDetails.OrderID = Orders.OrderID

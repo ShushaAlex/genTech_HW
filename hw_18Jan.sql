@@ -10,3 +10,23 @@ JOIN Orders ON Orders.EmployeeID = Employees.EmployeeID
 JOIN OrderDetails ON OrderDetails.OrderID = Orders.OrderID
 JOIN Products ON Products.ProductID = OrderDetails.ProductID
 GROUP BY Orders.EmployeeID
+
+-- Используя MySQL WorkBench (или аналогичный инструмент) создайте БД music (сервис онлайн-музыки) и в рамках нее таблицы users, tracks с полями на Ваше усмотрение
+
+CREATE TABLE users (
+	user_id int,
+	created_at timestamp,
+	first_name varchar(128),
+	last_name varchar(128),
+	email varchar(128),
+	date_of_birth date,
+	is_blocked boolean);
+
+CREATE TABLE tracks (
+	track_id int,
+	title varchar(256),
+	artist_id int,
+	album_id int,
+	genre_id int,
+	added_at timestamp,
+	is_cansored boolean);

@@ -12,6 +12,8 @@ JOIN Products ON Products.ProductID = OrderDetails.ProductID
 GROUP BY Orders.EmployeeID
 
 -- Используя MySQL WorkBench (или аналогичный инструмент) создайте БД music (сервис онлайн-музыки) и в рамках нее таблицы users, tracks с полями на Ваше усмотрение
+CREATE DATABASE music;
+USE music;
 
 CREATE TABLE users (
 	user_id int,
